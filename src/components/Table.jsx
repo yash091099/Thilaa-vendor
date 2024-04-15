@@ -64,7 +64,7 @@ export default function Table({ data }) {
             </tr>
           </thead>
           <tbody>
-            {sortedData.map((item, index) => {
+            {sortedData?.map((item, index) => {
               const fields = mapDataToFields(item);
               return (
                 <tr key={index} className='cursor-pointer h-[5rem] border-y border-[#DBDADE]'>
@@ -80,12 +80,12 @@ export default function Table({ data }) {
                 </tr>
               );
             })}
-            {!sortedData.length && <tr><td colSpan={columns.length} className='px-[1.56rem] text-center py-[0.62rem]'><p className='text-[#4B465C] text-[1rem] font-[400]'>No Inventory Data Found</p></td></tr>}
+            {!sortedData?.length && <tr><td colSpan={columns.length} className='px-[1.56rem] text-center py-[0.62rem]'><p className='text-[#4B465C] text-[1rem] font-[400]'>No Inventory Data Found</p></td></tr>}
           </tbody>
         </table>
       </div>
       <div className='w-full flex justify-between items-center'>
-        <p className='text-[#4B465C]/50 text-[1rem] font-[400] leading-[1.4675rem]'>Showing {sortedData.length ? 1 : 0} to {Math.min(10, sortedData.length)} of {sortedData.length}</p>
+        <p className='text-[#4B465C]/50 text-[1rem] font-[400] leading-[1.4675rem]'>Showing {sortedData?.length ? 1 : 0} to {Math.min(10, sortedData?.length)} of {sortedData?.length}</p>
       </div>
     </div>
   );

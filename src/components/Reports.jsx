@@ -52,7 +52,7 @@ export default function Reports() {
                     </LineChart>
                 </ReportCard>
             </div>
-            <ReportCard label="Revenue Report" value={`$ ${reports.revenue_by_year.reduce((a, b) => a + b, 0).toFixed(2)}`} filterOptions={["October"]} onClick={() => setShowRevenue(!showRevenue)}>
+            <ReportCard label="Revenue Report" value={`$ ${reports.revenue_by_year?.reduce((a, b) => a + b, 0).toFixed(2)}`} filterOptions={["October"]} onClick={() => setShowRevenue(!showRevenue)}>
                 <LineChart width={1000} height={300} data={data}>
                     <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="month" />

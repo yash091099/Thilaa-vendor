@@ -44,13 +44,13 @@ export default function InventoryManagement() {
     return <CustomLoader />;
   }
 
-  if (!products.length) {
-    return (
-      <div className="flex flex-col items-center justify-center p-[2rem]">
-        <p className="text-gray-500 text-[1rem]">No products available.</p>
-      </div>
-    );
-  }
+  // if (!products.length) {
+  //   return (
+  //     <div className="flex flex-col items-center justify-center p-[2rem]">
+  //       <p className="text-gray-500 text-[1rem]">No products available.</p>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className='flex flex-col gap-[2.5rem] bg-white p-[2rem] rounded-[1rem]'>

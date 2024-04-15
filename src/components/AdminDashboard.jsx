@@ -45,9 +45,9 @@ export default function AdminDashboard() {
       <div className='flex flex-col gap-[1.5rem] bg-white p-[2rem] rounded-[1rem] '>
         <h1 className='text-[1.5rem] font-[600]'>Vendor Dashboard</h1>
         <div className='flex gap-[1.25rem]'>
-          <DashboardCard image={acceptedIcon} value={dashboardData.total_orders.toString()} label="Total Orders" />
+          <DashboardCard image={acceptedIcon} value={dashboardData.total_orders?.toString()} label="Total Orders" />
           <DashboardCard image={rejectedIcon} value={dashboardData?.delivered_orders?.toString()} label="Delivered Orders" />
-          <DashboardCard image={revenueIcon} value={dashboardData.revenue.toString()} label="Revenue" />
+          <DashboardCard image={revenueIcon} value={dashboardData.revenue?.toString()} label="Revenue" />
           <DashboardCard image={productsIcon} value={dashboardData?.products?.toString()} label="Products" />
         </div>
       </div>

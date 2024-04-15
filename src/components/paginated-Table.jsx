@@ -98,11 +98,12 @@ export default function Table({ data, handleDelete }) {
                 ))}
               </tr>
             ))}
+            {!paginatedData.length && <tr><td colSpan={columns.length} className='text-center text-[1.125rem] font-[400]'>No inventory product found</td></tr>}
           </tbody>
         </table>
       </div>
       <Stack spacing={2} direction="row" justifyContent="center">
-        <Pagination count={count} page={currentPage} onChange={handleChangePage} />
+        { data.length ? <Pagination count={count} page={currentPage} onChange={handleChangePage} />:null}
       </Stack>
       <div className='w-full flex justify-between items-center'>
         <p className='text-[#4B465C]/50 text-[1rem] font-[400] leading-[1.4675rem]'>Showing {fromIndex} to {toIndex} of {data.length}</p>

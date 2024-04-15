@@ -32,13 +32,13 @@ export default function OrderManagement() {
     return <CustomLoader />;
   }
 
-  if (!orders.length) {
-    return (
-      <div className="flex flex-col items-center justify-center p-[2rem]">
-        <p className="text-gray-500 text-[1rem]">No orders available.</p>
-      </div>
-    );
-  }
+  // if (!orders.length) {
+  //   return (
+  //     <div className="flex flex-col items-center justify-center p-[2rem]">
+  //       <p className="text-gray-500 text-[1rem]">No orders available.</p>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className='flex flex-col gap-[2.5rem] bg-white p-[2rem] rounded-[1rem]'>
